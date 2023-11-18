@@ -368,6 +368,11 @@ void TerminalDisplay::setKeyboardCursorShape(Enum::CursorShapeEnum shape)
     _cursorShape = shape;
 }
 
+void TerminalDisplay::setCursorUnderlineThickness(int thickness)
+{
+    _cursorUnderlineThickness = thickness;
+}
+
 void TerminalDisplay::setCursorStyle(Enum::CursorShapeEnum shape, bool isBlinking, const QColor &customColor)
 {
     setKeyboardCursorShape(shape);
@@ -398,6 +403,7 @@ void TerminalDisplay::resetCursorStyle()
         auto shape = static_cast<Enum::CursorShapeEnum>(currentProfile->property<int>(Profile::CursorShape));
 
         setKeyboardCursorShape(shape);
+        setCursorUnderlineThickness(1);
         setBlinkingCursorEnabled(currentProfile->blinkingCursorEnabled());
     }
 }
@@ -3151,6 +3157,8 @@ void TerminalDisplay::applyProfile(const Profile::Ptr &profile)
 
     // cursor shape
     setKeyboardCursorShape(Enum::CursorShapeEnum(profile->property<int>(Profile::CursorShape)));
+
+    setCursorUnderlineThickness(profile->property<int>(Profile::CursorUnderlineThickness));
 
     // word characters
     setWordCharacters(profile->wordCharacters());

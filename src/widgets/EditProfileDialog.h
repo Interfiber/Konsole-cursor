@@ -150,6 +150,7 @@ private Q_SLOTS:
     void setVerticalLineColumn(int);
     void toggleBlinkingCursor(bool);
     void setCursorShape(int);
+    void setCursorThickness(int);
     void autoCursorColor();
     void customCursorColor();
     void customCursorColorChanged(const QColor &);

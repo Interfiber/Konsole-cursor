@@ -26,7 +26,7 @@
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>9</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="colorSchemeTab">
       <attribute name="title">
@@ -204,53 +204,7 @@
          <property name="spacing">
           <number>6</number>
          </property>
-         <item row="0" column="0" alignment="Qt::AlignRight">
-          <widget class="QLabel" name="label_8">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>Shape:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QRadioButton" name="cursorShapeBlock">
-           <property name="text">
-            <string comment="A solid rectangular">Block</string>
-           </property>
-           <attribute name="buttonGroup">
-            <string notr="true">cursorShape</string>
-           </attribute>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QRadioButton" name="cursorShapeIBeam">
-           <property name="text">
-            <string comment="A vertical line on the left edge">I-Beam</string>
-           </property>
-           <attribute name="buttonGroup">
-            <string notr="true">cursorShape</string>
-           </attribute>
-          </widget>
-         </item>
-         <item row="2" column="1">
-          <widget class="QRadioButton" name="cursorShapeUnderline">
-           <property name="text">
-            <string comment="A hortizonal line on the bottom edge">Underline</string>
-           </property>
-           <attribute name="buttonGroup">
-            <string notr="true">cursorShape</string>
-           </attribute>
-          </widget>
-         </item>
-         <item row="3" column="1">
+         <item row="4" column="1">
           <spacer>
            <property name="orientation">
             <enum>Qt::Vertical</enum>
@@ -266,23 +220,17 @@
            </property>
           </spacer>
          </item>
-         <item row="4" column="0" alignment="Qt::AlignRight">
-          <widget class="QLabel" name="label_3">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
+         <item row="1" column="1">
+          <widget class="QRadioButton" name="cursorShapeIBeam">
            <property name="text">
-            <string comment="Cursor color options">Color:</string>
+            <string comment="A vertical line on the left edge">I-Beam</string>
            </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">cursorShape</string>
+           </attribute>
           </widget>
          </item>
-         <item row="4" column="1">
+         <item row="5" column="1">
           <widget class="QRadioButton" name="autoCursorColorButton">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -301,7 +249,23 @@
            </attribute>
           </widget>
          </item>
-         <item row="5" column="1">
+         <item row="0" column="0" alignment="Qt::AlignRight">
+          <widget class="QLabel" name="label_8">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Shape:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
           <widget class="QRadioButton" name="customCursorColorButton">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -320,7 +284,75 @@
            </attribute>
           </widget>
          </item>
-         <item row="6" column="1">
+         <item row="5" column="0" alignment="Qt::AlignRight">
+          <widget class="QLabel" name="label_3">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string comment="Cursor color options">Color:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QRadioButton" name="cursorShapeBlock">
+           <property name="text">
+            <string comment="A solid rectangular">Block</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">cursorShape</string>
+           </attribute>
+          </widget>
+         </item>
+         <item row="9" column="0" alignment="Qt::AlignRight|Qt::AlignVCenter">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Blinking:</string>
+           </property>
+           <property name="buddy">
+            <cstring>enableBlinkingCursorButton</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="1">
+          <spacer>
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>16</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="9" column="1">
+          <widget class="QCheckBox" name="enableBlinkingCursorButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="toolTip">
+            <string>Make the cursor blink regularly</string>
+           </property>
+           <property name="text">
+            <string>Enabled</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="1">
           <layout class="QGridLayout" name="customColorLayout">
            <property name="spacing">
             <number>6</number>
@@ -396,45 +428,27 @@
            </item>
           </layout>
          </item>
-         <item row="7" column="1">
-          <spacer>
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>16</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="8" column="0" alignment="Qt::AlignRight|Qt::AlignVCenter">
-          <widget class="QLabel" name="label_2">
+         <item row="2" column="1">
+          <widget class="QRadioButton" name="cursorShapeUnderline">
            <property name="text">
-            <string>Blinking:</string>
+            <string comment="A hortizonal line on the bottom edge">Underline</string>
            </property>
-           <property name="buddy">
-            <cstring>enableBlinkingCursorButton</cstring>
+           <attribute name="buttonGroup">
+            <string notr="true">cursorShape</string>
+           </attribute>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>Underline thickness</string>
            </property>
           </widget>
          </item>
-         <item row="8" column="1">
-          <widget class="QCheckBox" name="enableBlinkingCursorButton">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="toolTip">
-            <string>Make the cursor blink regularly</string>
-           </property>
-           <property name="text">
-            <string>Enabled</string>
+         <item row="3" column="1">
+          <widget class="QSpinBox" name="underlineThicknessSelector">
+           <property name="value">
+            <number>1</number>
            </property>
           </widget>
          </item>

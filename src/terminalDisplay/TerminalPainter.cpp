@@ -616,9 +616,9 @@ void TerminalPainter::drawCursor(QPainter &painter, const QRect &rect, const QCo
             painter.drawRect(cursorRect.adjusted(halfWidth, halfWidth, -halfWidth, -halfWidth));
         }
     } else if (m_parentDisplay->cursorShape() == Enum::UnderlineCursor) {
-        QLineF line(cursorRect.left() + halfWidth, cursorRect.bottom() - halfWidth, cursorRect.right() - halfWidth, cursorRect.bottom() - halfWidth);
-        painter.drawLine(line);
+            painter.fillRect(rect.adjusted(0, m_parentDisplay->cursorUnderlineThickness(), 0, 0), cursorColor);
 
+            updateCursorTextColor(backgroundColor, characterColor);    
     } else if (m_parentDisplay->cursorShape() == Enum::IBeamCursor) {
         QLineF line(cursorRect.left() + halfWidth, cursorRect.top() + halfWidth, cursorRect.left() + halfWidth, cursorRect.bottom() - halfWidth);
         painter.drawLine(line);

@@ -746,6 +746,10 @@ void EditProfileDialog::setupAppearancePage(const Profile::Ptr &profile)
 
     updateColorSchemeButtons();
 
+
+    _appearanceUi->underlineThicknessSelector->setValue(profile->property<int>(Profile::CursorUnderlineThickness));
+    connect(_appearanceUi->underlineThicknessSelector, QOverload<int>::of(&QSpinBox::valueChanged), this, &Konsole::EditProfileDialog::setCursorThickness);
+
     connect(_appearanceUi->editColorSchemeButton, &QPushButton::clicked, this, &Konsole::EditProfileDialog::editColorScheme);
     connect(_appearanceUi->removeColorSchemeButton, &QPushButton::clicked, this, &Konsole::EditProfileDialog::removeColorScheme);
     connect(_appearanceUi->newColorSchemeButton, &QPushButton::clicked, this, &Konsole::EditProfileDialog::newColorScheme);
@@ -935,6 +939,10 @@ void EditProfileDialog::setCursorShape(int index)
 {
     preview(Profile::CursorShape, index);
     updateTempProfileProperty(Profile::CursorShape, index);
+}
+
+void EditProfileDialog::setCursorThickness(int thickness){
+    updateTempProfileProperty(Profile::CursorUnderlineThickness, thickness);
 }
 
 void EditProfileDialog::autoCursorColor()

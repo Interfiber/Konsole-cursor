@@ -145,6 +145,7 @@ const std::vector<Profile::PropertyInfo> Profile::DefaultProperties = {
     {CursorShape, "CursorShape", CURSOR_GROUP, Enum::BlockCursor},
     {CustomCursorColor, "CustomCursorColor", CURSOR_GROUP, QColor(Qt::white)},
     {CustomCursorTextColor, "CustomCursorTextColor", CURSOR_GROUP, QColor(Qt::black)},
+    {CursorUnderlineThickness, "CursorUnderlineThickness", CURSOR_GROUP, 1},
 
     // Interaction
     {WordCharacters, "WordCharacters", INTERACTION_GROUP, QLatin1String(":@-./_~?&=%+#")},

@@ -177,6 +177,8 @@ public:
      */
     void setKeyboardCursorShape(Enum::CursorShapeEnum shape);
 
+    void setCursorUnderlineThickness(int thickness);
+
     /**
      * Sets the Cursor Style (DECSCUSR) via escape sequences
      * @p shape cursor shape
@@ -352,6 +354,11 @@ public:
     Enum::CursorShapeEnum cursorShape() const
     {
         return _cursorShape;
+    }
+
+    int cursorUnderlineThickness() const
+    {
+        return _cursorUnderlineThickness;
     }
 
     bool bidiEnabled() const
@@ -783,6 +790,8 @@ private:
     bool _filterUpdateRequired = true;
 
     Enum::CursorShapeEnum _cursorShape = Enum::BlockCursor;
+
+    int _cursorUnderlineThickness = 1;
 
     InputMethodData _inputMethodData;
 

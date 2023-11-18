@@ -195,6 +195,9 @@ public:
          * See Enum::CursorShapeEnum
          */
         CursorShape,
+        /** (int) The thickness of the underline cursor
+        */
+        CursorUnderlineThickness,
         /** (QColor) The color used by terminal displays to draw the cursor.
          * Only applicable if the UseCustomCursorColor property is true.
          */
